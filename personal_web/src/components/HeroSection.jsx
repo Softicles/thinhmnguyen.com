@@ -65,7 +65,6 @@ export const HeroSection = () => {
                             <a
                                 className="animate-fade-in-delay-2 inline-block"
                                 href="mailto:thinhmnguyen4105@gmail.com"
-                                target="_new"
                             >
                                 <Icon
                                     icon="basil:gmail-solid"
