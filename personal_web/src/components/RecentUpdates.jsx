@@ -60,7 +60,6 @@ export const RecentUpdates = () => {
                                 >
                                     Alexander Karpekov
                                 </a>
-                                .
                             </p>
                         </li>
 
@@ -80,7 +79,6 @@ export const RecentUpdates = () => {
                                 >
                                     Ronnie Howard
                                 </a>
-                                .
                             </p>
                         </li>
                     </ul>
