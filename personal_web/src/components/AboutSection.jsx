@@ -14,7 +14,7 @@ export const AboutSection = () => {
                         <a
                             className="marker marker-2"
                             href="https://www.cc.gatech.edu/academics/threads/intelligence"
-                            target="_new"
+                            target="_blank"
                         >
                             Intelligence
                         </a>{" "}
@@ -22,7 +22,7 @@ export const AboutSection = () => {
                         <a
                             className="marker marker-2"
                             href="https://www.cc.gatech.edu/academics/threads/theory"
-                            target="_new"
+                            target="_blank"
                         >
                             Theory
                         </a>{" "}
@@ -30,7 +30,7 @@ export const AboutSection = () => {
                         <a
                             className="marker marker-3"
                             href="https://www.gatech.edu/"
-                            target="_new"
+                            target="_blank"
                         >
                             Georgia Tech
                         </a>
@@ -42,7 +42,7 @@ export const AboutSection = () => {
                         <a
                             className="marker marker-4"
                             href="https://strava.app.link/q5L9VZ6NrWb"
-                            target="_new"
+                            target="_blank"
                         >
                             23:08 in the 5K
                         </a>{" "}
@@ -56,7 +56,7 @@ export const AboutSection = () => {
                         <a
                             className="marker marker-1"
                             href="https://programmingteam.cc.gatech.edu/"
-                            target="_new"
+                            target="_blank"
                         >
                             Competitive Programming @ GT
                         </a>{" "}

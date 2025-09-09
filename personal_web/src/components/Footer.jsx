@@ -8,7 +8,7 @@ export const Footer = () => {
                 <a
                     className="marker marker-1 font-semibold"
                     href="https://www.alexkarpekov.com/"
-                    target="_new"
+                    target="_blank"
                 >
                     Alexander Karpekov
                 </a>

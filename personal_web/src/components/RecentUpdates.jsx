@@ -31,7 +31,7 @@ export const RecentUpdates = () => {
                                 <a
                                     className="marker marker-3"
                                     href="https://www.aicalendar.art/"
-                                    target="_new"
+                                    target="_blank"
                                 >
                                     AI Calendar
                                 </a>{" "}
@@ -48,7 +48,7 @@ export const RecentUpdates = () => {
                                 <a
                                     className="marker marker-2"
                                     href="https://github.com/Softicles/Fine-tuning_an_OCR"
-                                    target="_new"
+                                    target="_blank"
                                 >
                                     Fine-tuning a PaddleOCR model
                                 </a>{" "}
@@ -56,7 +56,7 @@ export const RecentUpdates = () => {
                                 <a
                                     className="marker marker-1"
                                     href="https://www.alexkarpekov.com/"
-                                    target="_new"
+                                    target="_blank"
                                 >
                                     Alexander Karpekov
                                 </a>
@@ -75,7 +75,7 @@ export const RecentUpdates = () => {
                                 <a
                                     className="marker marker-4"
                                     href="https://www.cc.gatech.edu/people/ronnie-howard"
-                                    target="_new"
+                                    target="_blank"
                                 >
                                     Ronnie Howard
                                 </a>

@@ -41,7 +41,7 @@ export const HeroSection = () => {
                             <a
                                 className="animate-fade-in-delay-2 inline-block"
                                 href="https://www.linkedin.com/in/thinh-minh-nguyen/"
-                                target="_new"
+                                target="_blank"
                             >
                                 <Icon
                                     icon="ri:linkedin-fill"
@@ -53,7 +53,7 @@ export const HeroSection = () => {
                             <a
                                 className="animate-fade-in-delay-2 inline-block"
                                 href="https://github.com/Softicles"
-                                target="_new"
+                                target="_blank"
                             >
                                 <Icon
                                     icon="ri:github-fill"
@@ -78,7 +78,7 @@ export const HeroSection = () => {
                             <a
                                 href="https://drive.google.com/file/d/179mAW4MEk33PV2robkVUN9CQqDZfEPtF/view?usp=sharing"
                                 className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
-                                target="_new"
+                                target="_blank"
                             >
                                 View Resume
                             </a>
