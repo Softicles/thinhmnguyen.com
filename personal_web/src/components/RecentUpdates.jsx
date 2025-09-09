@@ -55,7 +55,7 @@ export const RecentUpdates = () => {
                                 advised by Professor{" "}
                                 <a
                                     className="marker marker-1"
-                                    href="https://www.linkedin.com/in/karpekov/"
+                                    href="https://www.alexkarpekov.com/"
                                     target="_new"
                                 >
                                     Alexander Karpekov
