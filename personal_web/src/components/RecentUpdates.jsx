@@ -11,7 +11,7 @@ export const RecentUpdates = () => {
                     <ul className="bg-card-3 px-10 py-10 text-muted-foreground rounded-[50px] border border-border-3 text-left">
                         <li className="flex">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
                                 Sep 2025
                             </span>
                             {/* Description */}
@@ -22,7 +22,7 @@ export const RecentUpdates = () => {
 
                         <li className="flex mt-5">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
                                 Aug 2025
                             </span>
                             {/* Description */}
@@ -40,7 +40,7 @@ export const RecentUpdates = () => {
                         </li>
 
                         <li className="flex mt-5">
-                            <span className="w-24 shrink-0 font-light text-muted-foreground">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
                                 Jul 2025
                             </span>
                             <p className="text-base text-foreground leading-relaxed">
@@ -65,7 +65,7 @@ export const RecentUpdates = () => {
 
                         <li className="flex mt-5">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
                                 May 2025
                             </span>
                             {/* Description */}
