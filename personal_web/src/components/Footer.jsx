@@ -11,7 +11,17 @@ export const Footer = () => {
                     target="_blank"
                 >
                     Alexander Karpekov
+                </a>{" "}
+                and built using{" "}
+                <a
+                    className="marker marker-2 italic"
+                    href="https://react.dev/"
+                    target="_blank"
+                >
+                    {" "}
+                    React
                 </a>
+                .
                 {/* <span className="font-semibold">Thinh Nguyen</span>
                 <MessageCircleHeart className="ml-2 h-6 w-6 text-red-900 inline-block" /> */}
             </p>
