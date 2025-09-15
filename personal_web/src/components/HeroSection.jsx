@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import chibi from "./imgs/chibi.jpg";
+import avatar from "./imgs/IMG_2763_cropped.jpg";
 import { cn } from "@/lib/utils";
 import { TypeAnimation } from "react-type-animation";
 
@@ -15,7 +15,7 @@ export const HeroSection = () => {
                         )}
                     >
                         <img
-                            src={chibi}
+                            src={avatar}
                             alt="Chibi Avatar"
                             className="w-60 h-60 rounded-full object-cover"
                         />
@@ -76,7 +76,7 @@ export const HeroSection = () => {
 
                             <br />
                             <a
-                                href="https://drive.google.com/file/d/10sE84d4jMxw6_Vn-Ebh-TtmIJt4xognX/view?usp=sharing"
+                                href="https://drive.google.com/file/d/13Arlfj3renqCSCVsivgwEMj9-mBmEWWv/view?usp=sharing"
                                 className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                 target="_blank"
                             >
