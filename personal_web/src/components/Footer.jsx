@@ -2,7 +2,7 @@ import { Copyright, MessageCircleHeart, Github, Linkedin } from "lucide-react";
 
 export const Footer = () => {
     return (
-        <footer className="py-12 px-4 bg-card relative border-t border-transparent mt-12 pt-8 justify-between items-center gradient animate-gradientShift">
+        <footer className="py-12 bg-card relative border-t border-transparent justify-between items-center gradient animate-gradientShift">
             <p className="container text-[20] text-muted-foreground space-y-2 inline-block mt-2">
                 This website is inspired by{" "}
                 <a

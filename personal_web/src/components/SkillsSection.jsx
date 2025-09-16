@@ -231,7 +231,7 @@ export const SkillsSection = () => {
                 </table>
             </div>
 
-            <div className="mt-30 absolute bottom left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <div className="mt-15 absolute bottom left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
                 <button>
                     <a href="#hero">
                         <ArrowUp className="h-5 w-5 text-primary" />
