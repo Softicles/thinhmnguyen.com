@@ -158,9 +158,9 @@ export const ProjectsSection = () => {
 
                             {/* Achievements */}
 
-                            <div className="flex flex-wrap gap-2 font-semibold mb-6">
+                            <div className="flex flex-wrap font-semibold mb-6">
                                 {project.awards.map((award, key) => (
-                                    <span key={key} className="ml-6">
+                                    <span key={key} className="px-6">
                                         <Trophy className="h-6 w-6 text-yellow-300 inline-block align-middle" />{" "}
                                         {award}
                                     </span>
