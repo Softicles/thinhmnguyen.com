@@ -43,7 +43,7 @@ const projects = [
         id: 3,
         title: "EPL Payroll vs Performance",
         description:
-            "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL).",
+            "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
         image: "/projects/epl_analysis.png",
         tags: ["R", "RStudio"],
         urls: [
