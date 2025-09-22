@@ -8,7 +8,7 @@ export const AboutSection = () => {
                         About <span className="text-primary"> Me</span>
                     </h2>
 
-                    <p className="bg-card-1 px-10 py-10 text-muted-foreground rounded-[50px] border border-border-1 text-left">
+                    <p className="bg-card-1 px-5 md:px-10 py-10 text-muted-foreground rounded-[50px] border border-border-1 text-left">
                         I'm an undergraduate student majoring in Computer
                         Science with{" "}
                         <a

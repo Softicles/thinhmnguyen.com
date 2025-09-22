@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const StarBackground = () => {
+export const Background = () => {
     const [stars, setStars] = useState([]);
     const [meteors, setMeteors] = useState([]);
 
@@ -19,7 +19,7 @@ export const StarBackground = () => {
 
     const generateStars = () => {
         const numberOfStars = Math.floor(
-            (window.innerWidth * window.innerHeight) / 20000
+            (window.innerWidth * window.innerHeight) / 60000
         );
 
         const newStars = [];
@@ -31,7 +31,7 @@ export const StarBackground = () => {
                 x: Math.random() * 5 + (i * 100) / numberOfStars,
                 y: Math.random() * 100,
                 opacity: Math.random() * 0.5 + 0.5,
-                animationDuration: Math.random() * 4 + 2,
+                animationDuration: Math.random() * 4 + 5,
             });
         }
 
@@ -49,7 +49,7 @@ export const StarBackground = () => {
                 x: Math.random() * 100,
                 y: Math.random() * 20,
                 delay: Math.random() * 15,
-                animationDuration: Math.random() * 3 + 3,
+                animationDuration: Math.random() * 3 + 10,
             });
         }
 
@@ -57,11 +57,11 @@ export const StarBackground = () => {
     };
 
     return (
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="fixed inset-0 pointer-events-none">
             {stars.map((star) => (
                 <div
                     key={star.id}
-                    className="star animate-dimming"
+                    className="absolute star animate-dimming z-0"
                     style={{
                         width: star.size + "px",
                         height: star.size + "px",
@@ -76,7 +76,7 @@ export const StarBackground = () => {
             {meteors.map((meteor) => (
                 <div
                     key={meteor.id}
-                    className="meteor animate-meteor"
+                    className="absolute meteor animate-meteor z-0"
                     style={{
                         width: meteor.size * 5 + "px",
                         height: meteor.size + "px",

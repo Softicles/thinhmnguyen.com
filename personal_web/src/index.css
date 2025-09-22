@@ -4,6 +4,7 @@
     --color-border: hsl(var(--border));
     --color-background: hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
+    --color-border-icon: hsl(var(--border-icon));
 
     --color-card-1: hsl(var(--card-1));
     --color-border-1: hsl(var(--border-1));
@@ -31,7 +32,7 @@
     --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
     --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
     --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-    --animate-dimming: dimming 10s ease-in-out infinite;
+    --animate-dimming: dimming 40s ease-in-out infinite;
     --animate-meteor: meteor 5s linear infinite;
     --animate-spin: spin 20s linear infinite;
     --animate-gradientShift: gradientShift 20s ease infinite;
@@ -61,7 +62,7 @@
             opacity: 1;
         }
         70% {
-            opacity: 0;
+            opacity: 0.2;
         }
         100% {
             opacity: 1;
@@ -114,6 +115,7 @@
     :root {
         --background: 210 40% 98%;
         --foreground: 222 47% 11%;
+        --border-icon: 224.4 64.3% 32.9%;
 
         --card-1: 25 100% 93.2%;
         --border-1: 29 100% 29.7%;
@@ -124,7 +126,7 @@
 
         --marker-1: 233 100% 29.6%; /*deep blue*/
         --marker-2: 189 100% 34%; /*light blue*/
-        --marker-3: 34 67.8% 46.7%; /*yello*/
+        --marker-3: 34 67.8% 46.7%; /*yellow*/
         --marker-4: 338 100% 26.1%; /*deep red*/
         --marker-text: 213 31% 91%;
 
@@ -139,6 +141,7 @@
     .dark {
         --background: 222 47% 4%;
         --foreground: 213 31% 91%;
+        --border-icon: 53.87 100% 73.14%;
 
         --card-1: transparent;
         --border-1: 25 100% 85.2%;

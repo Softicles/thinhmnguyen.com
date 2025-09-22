@@ -8,10 +8,10 @@ export const RecentUpdates = () => {
                         Recent <span className="text-primary"> Updates</span>
                     </h2>
 
-                    <ul className="bg-card-3 px-10 py-10 text-muted-foreground rounded-[50px] border border-border-3 text-left">
-                        <li className="flex">
+                    <ul className="bg-card-3 px-5 md:px-10 py-10 text-muted-foreground rounded-[50px] border border-border-3 text-left">
+                        <li className="flex flex-col sm:flex-row sm:items-start sm:space-x-4">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground">
                                 Sep 2025
                             </span>
                             {/* Description */}
@@ -20,9 +20,9 @@ export const RecentUpdates = () => {
                             </p>
                         </li>
 
-                        <li className="flex mt-5">
+                        <li className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 mt-5">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground">
                                 Aug 2025
                             </span>
                             {/* Description */}
@@ -39,8 +39,8 @@ export const RecentUpdates = () => {
                             </p>
                         </li>
 
-                        <li className="flex mt-5">
-                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
+                        <li className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 mt-5">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground">
                                 Jul 2025
                             </span>
                             <p className="text-base text-foreground leading-relaxed">
@@ -63,9 +63,9 @@ export const RecentUpdates = () => {
                             </p>
                         </li>
 
-                        <li className="flex mt-5">
+                        <li className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 mt-5">
                             {/* Month */}
-                            <span className="w-24 shrink-0 font-light text-muted-foreground underline underline-offset-5 decoration-gray-300">
+                            <span className="w-24 shrink-0 font-light text-muted-foreground">
                                 May 2025
                             </span>
                             {/* Description */}

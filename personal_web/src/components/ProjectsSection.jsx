@@ -62,7 +62,7 @@ const projects = [
 
     {
         id: 4,
-        title: "Model complicated Random Variables using R",
+        title: "Model complicated Random Variables with R",
         description:
             'This is the final project for "MATH 3215: Probabilities and Statistic" taught by Dr. Manh Khang Huynh. This is the best Math class that I have taken at Georgia Tech so far! (I also attach my note for this class inside the repository)',
         image: "/projects/plot_of_N10_problem_6.png",
@@ -125,7 +125,7 @@ export const ProjectsSection = () => {
                             </div>
 
                             <div className="p-6">
-                                <div className="flex justify-between items-center">
+                                <div className="flex">
                                     <div className="flex space-x-3">
                                         {project.urls.map(
                                             ([link, Icon], key) => (
@@ -152,7 +152,7 @@ export const ProjectsSection = () => {
 
                             {/* Project Description */}
 
-                            <p className="px-6 text-muted-foreground text-sm mt-4 mb-4 text-left">
+                            <p className="px-3 md:px-6 text-muted-foreground text-sm mt-4 mb-4 text-left">
                                 {project.description}
                             </p>
 
@@ -160,7 +160,7 @@ export const ProjectsSection = () => {
 
                             <div className="flex flex-wrap font-semibold mb-6">
                                 {project.awards.map((award, key) => (
-                                    <span key={key} className="px-6">
+                                    <span key={key} className="px-3 md:px-6">
                                         <Trophy className="h-6 w-6 text-yellow-300 inline-block align-middle" />{" "}
                                         {award}
                                     </span>
@@ -169,7 +169,7 @@ export const ProjectsSection = () => {
 
                             {/* Tags */}
 
-                            <div className="flex flex-wrap gap-2 mb-4 px-6">
+                            <div className="flex flex-wrap gap-2 mb-4 px-3 md:px-6">
                                 {project.tags.map((tag, id) => (
                                     <span
                                         key={id}
