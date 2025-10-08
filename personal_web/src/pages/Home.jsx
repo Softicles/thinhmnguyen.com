@@ -6,7 +6,6 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { Footer } from "../components/Footer";
 import { RecentUpdates } from "../components/RecentUpdates";
 import { ThemeToggle } from "../components/ThemeToggle";
-import { LightBackground } from "../components/LightBackground";
 
 export const Home = () => {
     return (
