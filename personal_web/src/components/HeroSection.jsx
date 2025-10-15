@@ -76,7 +76,7 @@ export const HeroSection = () => {
 
                             <br />
                             <a
-                                href="https://drive.google.com/file/d/1oT61EkAekaqPJ_W62NK-iCuAZ7LpMgXW/view?usp=sharing"
+                                href="https://drive.google.com/file/d/14anbHdbmRTr-veJMY-lvMsgG2ecwbZJl/view?usp=sharing"
                                 className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                 target="_blank"
                             >
