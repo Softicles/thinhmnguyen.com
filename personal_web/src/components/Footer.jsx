@@ -21,7 +21,6 @@ export const Footer = () => {
                     {" "}
                     React
                 </a>
-                .
                 {/* <span className="font-semibold">Thinh Nguyen</span>
                 <MessageCircleHeart className="ml-2 h-6 w-6 text-red-900 inline-block" /> */}
             </p>
