@@ -34,7 +34,7 @@ export const AboutSection = () => {
                         >
                             Georgia Tech
                         </a>
-                        . My current interests are Analytics and Software
+                        . My current interests are Machine Learning and Software
                         Engineering, which I believe have a lot of potential for
                         innovation and application. Outside of school, I love
                         playing piano, running, and I take pride in my personal
