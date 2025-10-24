@@ -18,11 +18,13 @@ const projects = [
             "Python",
             "JavaScript",
             "Django",
+            "React",
             "CSS",
             "Bootstrap",
             "HTML",
             "OpenAI API",
             "Google Calendar API",
+            "OAuth",
         ],
         urls: [
             ["https://aicalendar.art", ExternalLink],
@@ -35,7 +37,14 @@ const projects = [
         title: "Fine-tuning a PaddleOCR model",
         description: `I figured out that the English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting, even though I think it's not that bad. For this reason, I used my own handwritten documents from the classes I took at Georgia Tech to re-train the model.`,
         image: "/projects/finetune_ocr.png",
-        tags: ["PaddleOCR", "PPOCRLabel", "Python", "Linux", "OpenAI API"],
+        tags: [
+            "PaddlePaddle",
+            "PPOCRLabel",
+            "Python",
+            "Linux",
+            "OpenAI API",
+            "PIL",
+        ],
         urls: [["https://github.com/Softicles/Fine-tuning_an_OCR", GithubIcon]],
         awards: ["Achieved 90% reduction in loss value"],
     },
@@ -45,7 +54,7 @@ const projects = [
         description:
             "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
         image: "/projects/epl_analysis.png",
-        tags: ["R", "RStudio"],
+        tags: ["R", "RStudio", "Excel"],
         urls: [
             [
                 "https://github.com/Softicles/EPL-payroll-points-analysis",
