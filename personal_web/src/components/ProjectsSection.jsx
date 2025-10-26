@@ -4,6 +4,7 @@ import {
     FileText,
     Trophy,
     Youtube,
+    Pen,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -12,16 +13,14 @@ const projects = [
         id: 1,
         title: "AI Calendar",
         description:
-            'A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar. This project initially served as the final project for "CS 2340: Objects and Design" at Georgia Tech.',
+            "A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar. I create it to help reducing the time spending on planning days/weeks from hours to just minutes.",
         image: "/projects/ai_calendar.png",
         tags: [
             "Python",
             "JavaScript",
             "Django",
             "React",
-            "CSS",
             "Bootstrap",
-            "HTML",
             "OpenAI API",
             "Google Calendar API",
             "OAuth",
@@ -30,12 +29,34 @@ const projects = [
             ["https://aicalendar.art", ExternalLink],
             ["https://github.com/Softicles/Continue-AI-Calendar", GithubIcon],
         ],
-        awards: ["Achieved 100/100 points at Final Demo day"],
+        awards: ["Best prototype at CS 2340 - Final Presentation day"],
     },
+
     {
         id: 2,
+        title: "Movie Store",
+        description:
+            "A full-stack Django movie store website. I used the Master-Agent Architecture (two EC2s + two EFSs) combined with Jenkins and Docker to deploy this website onto AWS.",
+        image: "/projects/movie_store.png",
+        tags: ["Python", "Django", "SQLite", "Terraform", "AWS", "Docker"],
+        urls: [
+            [
+                "http://ec2-44-251-8-106.us-west-2.compute.amazonaws.com/",
+                ExternalLink,
+            ],
+            ["https://github.com/Softicles/moviestore_with_aws", GithubIcon],
+            [
+                "https://aws.plainenglish.io/mastering-jenkins-cost-efficiency-scalable-ci-cd-with-aws-ecs-master-agent-architecture-d157b3788474",
+                Pen,
+            ],
+        ],
+        awards: ["Achieved 100/100 points as Midterm Project - CS 2340"],
+    },
+
+    {
+        id: 3,
         title: "Fine-tuning a PaddleOCR model",
-        description: `I figured out that the English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting, even though I think it's not that bad. For this reason, I used my own handwritten documents from the classes I took at Georgia Tech to re-train the model.`,
+        description: `I figured out that the English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I used my own handwritten documents from the classes I took at Georgia Tech to re-train the model, so that I can efficiently use the model to translate my handwriting to texts.`,
         image: "/projects/finetune_ocr.png",
         tags: [
             "PaddlePaddle",
@@ -49,7 +70,26 @@ const projects = [
         awards: ["Achieved 90% reduction in loss value"],
     },
     {
-        id: 3,
+        id: 4,
+        title: "Breast Cancer Classifer",
+        description:
+            "I solved the Breast Cancer Classifier problem using a ResNet18.",
+        image: "/projects/train_loss.png",
+        tags: ["Sckit-learn", "Pandas", "Seaborn", "Pytorch", "Matlotlib"],
+        urls: [
+            [
+                "https://github.com/Softicles/Breast_Cancer_Classifier/blob/main/Breast-Cancer-Classifier.ipynb",
+                FileText,
+            ],
+            [
+                "https://www.kaggle.com/competitions/breast-cancer-classification",
+                Pen,
+            ],
+        ],
+        awards: ["Achieved around 92% accuracy"],
+    },
+    {
+        id: 5,
         title: "EPL Payroll vs Performance",
         description:
             "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
@@ -66,11 +106,10 @@ const projects = [
             ],
             ["https://youtu.be/08_uHv_Ve2s", Youtube],
         ],
-        awards: [],
+        awards: ["Achieved 100/100 points as Final Project - ECON 2250"],
     },
-
     {
-        id: 4,
+        id: 6,
         title: "Model complicated Random Variables with R",
         description:
             'This is the final project for "MATH 3215: Probabilities and Statistic" taught by Dr. Manh Khang Huynh. This is the best Math class that I have taken at Georgia Tech so far! (I also attach my note for this class inside the repository)',
@@ -90,7 +129,7 @@ const projects = [
     },
 
     {
-        id: 5,
+        id: 7,
         title: "The Hardest Game in The World",
         description:
             'This is a game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
@@ -102,7 +141,7 @@ const projects = [
                 GithubIcon,
             ],
         ],
-        awards: ["Achieved 105/100 points"],
+        awards: ["Achieved 105/100 points for HW6 - CS 2110"],
     },
 ];
 
@@ -167,7 +206,7 @@ export const ProjectsSection = () => {
 
                             {/* Achievements */}
 
-                            <div className="flex flex-wrap font-semibold mb-6 text-left">
+                            <div className="flex flex-wrap font-semibold mb-6 text-sm text-left">
                                 {project.awards.map((award, key) => (
                                     <span key={key} className="px-3 md:px-6">
                                         <Trophy className="h-6 w-6 text-yellow-300 inline-block align-middle" />{" "}
@@ -183,7 +222,7 @@ export const ProjectsSection = () => {
                                     <span
                                         key={id}
                                         className={cn(
-                                            "px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary",
+                                            "px-2 text-xs font-medium border rounded-full bg-secondary text-secondary",
                                             "hover:text-primary transition-colors duration-300"
                                         )}
                                     >
