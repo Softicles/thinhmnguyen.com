@@ -20,10 +20,11 @@ const projects = [
             "JavaScript",
             "Django",
             "React",
-            "Bootstrap",
             "OpenAI API",
             "Google Calendar API",
             "OAuth",
+            "PostgreSQL",
+            "Vercel",
         ],
         urls: [
             ["https://aicalendar.art", ExternalLink],
@@ -59,12 +60,12 @@ const projects = [
         description: `I figured out that the English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I used my own handwritten documents from the classes I took at Georgia Tech to re-train the model, so that I can efficiently use the model to translate my handwriting to texts.`,
         image: "/projects/finetune_ocr.png",
         tags: [
+            "Python",
             "PaddlePaddle",
             "PPOCRLabel",
-            "Python",
-            "Linux",
             "OpenAI API",
             "PIL",
+            "Linux",
         ],
         urls: [["https://github.com/Softicles/Fine-tuning_an_OCR", GithubIcon]],
         awards: ["Achieved 90% reduction in loss value"],
@@ -75,7 +76,14 @@ const projects = [
         description:
             "I solved the Breast Cancer Classifier problem using a ResNet18.",
         image: "/projects/train_loss.png",
-        tags: ["Sckit-learn", "Pandas", "Seaborn", "Pytorch", "Matlotlib"],
+        tags: [
+            "Python",
+            "Sckit-learn",
+            "Pandas",
+            "Seaborn",
+            "Pytorch",
+            "Matlotlib",
+        ],
         urls: [
             [
                 "https://github.com/Softicles/Breast_Cancer_Classifier/blob/main/Breast-Cancer-Classifier.ipynb",
@@ -134,7 +142,7 @@ const projects = [
         description:
             'This is a game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
         image: "/projects/hardest_game.png",
-        tags: ["C", "mGBA"],
+        tags: ["C", "mGBA", "Docker"],
         urls: [
             [
                 "https://github.com/Softicles/The-Hardest-Game-in-The-World",
