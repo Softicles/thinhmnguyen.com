@@ -30,7 +30,7 @@ const projects = [
             ["https://aicalendar.art", ExternalLink],
             ["https://github.com/Softicles/Continue-AI-Calendar", GithubIcon],
         ],
-        awards: ["Best prototype at CS 2340 - Final Presentation day"],
+        awards: ["One of the best prototypes for CS 2340 - Final Project"],
     },
 
     {
