@@ -28,10 +28,10 @@ export const HeroSection = () => {
                                 {" "}
                                 Nguyen
                             </span>
-                            <div className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                            <div className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl text-center md:text-left">
                                 <TypeAnimation
                                     sequence={[
-                                        "Computer Science Student — Philomath",
+                                        "CS student — Art lover — Math enthusiast",
                                     ]}
                                     wrapper="span"
                                     speed={50}
