@@ -16,8 +16,8 @@ export const RecentUpdates = () => {
                             </span>
                             {/* Description */}
                             <p className="text-base text-foreground leading-relaxed">
-                                Deployed my personal website and also came back to be a Teaching Assistant for CS 2050 - Discrete Math 
-                                for Professor 
+                                Deployed my personal website and also came back to TA for CS 2050 
+                                under Professor {" "}
                                 <a
                                     className="marker marker-4"
                                     href="https://faculty.cc.gatech.edu/~ladha/"
