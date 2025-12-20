@@ -75,13 +75,22 @@ export const HeroSection = () => {
                             </a>
 
                             <br />
-                            <a
-                                href="https://drive.google.com/file/d/1ja5wT_UYR8T9s6A0aRjZGCylsfBh-E_V/view?usp=sharing"
-                                className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
-                                target="_blank"
-                            >
-                                View Resume
-                            </a>
+                            <div className="mt-3 flex flex-row items-center gap-4">
+                                <a
+                                    href="https://drive.google.com/file/d/1nwSkICDiOjouI85SFIOn7fcQmpk8M3Rq/view?usp=sharing"
+                                    className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
+                                    target="_blank"
+                                >
+                                    View Resume
+                                </a>
+
+                                {/* <a
+                                    href="/archive"
+                                    className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
+                                >
+                                    Archive
+                                </a> */}
+                            </div>
                         </div>
                     </h1>
                 </div>
