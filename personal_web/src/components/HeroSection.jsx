@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import avatar from "./imgs/IMG_2763_cropped.jpg";
 import { cn } from "@/lib/utils";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
     return (
@@ -75,21 +76,21 @@ export const HeroSection = () => {
                             </a>
 
                             <br />
-                            <div className="mt-3 flex flex-row items-center gap-4">
+                            <div className="inline-flex items-center gap-4">
                                 <a
                                     href="https://drive.google.com/file/d/1nwSkICDiOjouI85SFIOn7fcQmpk8M3Rq/view?usp=sharing"
-                                    className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
+                                    className="md:position-center px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                     target="_blank"
                                 >
                                     View Resume
                                 </a>
 
-                                {/* <a
-                                    href="/archive"
+                                {/* <Link
+                                    to="/archive"
                                     className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                 >
                                     Archive
-                                </a> */}
+                                </Link> */}
                             </div>
                         </div>
                     </h1>
