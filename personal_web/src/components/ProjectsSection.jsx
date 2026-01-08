@@ -13,7 +13,7 @@ const projects = [
         id: 1,
         title: "AI Calendar",
         description:
-            "A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar. I create it to help reducing the time spending on planning days/weeks from hours to just minutes.",
+            "A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar.",
         image: "/projects/ai_calendar.png",
         tags: [
             "Python",
@@ -57,7 +57,7 @@ const projects = [
     {
         id: 3,
         title: "Fine-tuning a PaddleOCR model",
-        description: `I figured out that the English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I used my own handwritten documents from the classes I took at Georgia Tech to re-train the model, so that I can efficiently use the model to translate my handwriting to texts.`,
+        description: `The English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I re-train the model using my notes from the classes I took at Georgia Tech.`,
         image: "/projects/finetune_ocr.png",
         tags: [
             "Python",
@@ -140,7 +140,7 @@ const projects = [
         id: 7,
         title: "The Hardest Game in The World",
         description:
-            'This is a game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
+            'A game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
         image: "/projects/hardest_game.png",
         tags: ["C", "mGBA", "Docker"],
         urls: [
