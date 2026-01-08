@@ -35,33 +35,23 @@ export const AboutSection = () => {
                             Georgia Tech
                         </a>
                         . My current interests are Machine Learning and Software
-                        Engineering, which I believe have a lot of potential for
-                        innovation and application. Outside of school, I love
-                        playing piano, running, and I take pride in my personal
-                        record of{" "}
+                        Engineering. Outside of school, I love
+                        playing piano, badminton, and running. I take pride in my 
+                        personal record of{" "}
                         <a
                             className="marker marker-4"
                             href="https://strava.app.link/q5L9VZ6NrWb"
                             target="_blank"
                         >
                             23:08 in the 5K
-                        </a>{" "}
-                        . <br /> <br />I have a big desire to interact with the
+                        </a>. Currently, I'm focusing on badminton.
+
+                        <br /> <br />I have a big desire to interact with the
                         world. In particular, I like to learn and find some ways
                         to apply my skills. For this reason, I enjoy attending
                         class lectures, where I can learn many tips and skills
-                        from the professors. Furthermore, I love chatting with
-                        people, so after classes I am usually spotted working on
-                        algorithms at the{" "}
-                        <a
-                            className="marker marker-1"
-                            href="https://programmingteam.cc.gatech.edu/"
-                            target="_blank"
-                        >
-                            Competitive Programming @ GT
-                        </a>{" "}
-                        club or team projects with my friends. I'm always open
-                        to collaboration so feel free to reach out!
+                        from the professors. I'm always open to collaboration so 
+                        feel free to reach out!
                     </p>
                 </div>
             </div>
