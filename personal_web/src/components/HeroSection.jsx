@@ -78,7 +78,7 @@ export const HeroSection = () => {
                             <br />
                             <div className="inline-flex items-center gap-4">
                                 <a
-                                    href="https://drive.google.com/file/d/1HqBnNT9BGWfb-HXtcE7MYlDx-xNWO1BN/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1J4cxCGAhfLlcxqiVVpON0i0fjwoqVLuN/view?usp=sharing"
                                     className="md:position-center px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                     target="_blank"
                                 >
