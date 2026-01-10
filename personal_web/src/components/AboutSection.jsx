@@ -44,7 +44,7 @@ export const AboutSection = () => {
                             target="_blank"
                         >
                             23:08 in the 5K
-                        </a>. Currently, I'm focusing on badminton.
+                        </a>. Currently, I want to learn more about badminton.
 
                         <br /> <br />I have a big desire to interact with the
                         world. In particular, I like to learn and find some ways
