@@ -47,7 +47,7 @@ export const AboutSection = () => {
                         </a>. Currently, I want to learn more about badminton.
 
                         <br /> <br />I have a big desire to interact with the
-                        world. In particular, I like to learn and find some ways
+                        world. In particular, I like to learn and find ways
                         to apply my skills. For this reason, I enjoy attending
                         class lectures, where I can learn many tips and skills
                         from the professors. I'm always open to collaboration so 
