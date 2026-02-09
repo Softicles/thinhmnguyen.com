@@ -56,6 +56,21 @@ const projects = [
 
     {
         id: 3,
+        title: "Markov Decision Model with multiple observation processes",
+        description: `Found a ghost in the TextWorld environment using Hidden Markov Models with Multiple Observation Processes (task 2 - part A). I read the paper "Hidden Markov Models with Multiple Observation Prrocesses" by James Yuanjie Zhao to understand the algorithm and implemented it from scratch in Python.`,
+        image: "/projects/text_world.jpg",
+        tags: [
+            "Python",
+            "TextWorld",
+            "numpy",
+            "pgmpy",
+        ],
+        urls: [["https://github.com/Softicles/CS-3600-HW3", GithubIcon], ["https://arxiv.org/abs/2210.09381", Pen]],
+        awards: ["Achieved more than 96% accuracy on the test set"],
+    },
+
+    {
+        id: 4,
         title: "Fine-tuning a PaddleOCR model",
         description: `The English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I re-train the model using my notes from the classes I took at Georgia Tech.`,
         image: "/projects/finetune_ocr.png",
@@ -71,7 +86,7 @@ const projects = [
         awards: ["Achieved 90% reduction in loss value"],
     },
     {
-        id: 4,
+        id: 5,
         title: "Breast Cancer Classifer",
         description:
             "I solved the Breast Cancer Classifier problem using a ResNet18.",
@@ -97,7 +112,7 @@ const projects = [
         awards: ["Achieved around 92% accuracy"],
     },
     {
-        id: 5,
+        id: 6,
         title: "EPL Payroll vs Performance",
         description:
             "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
@@ -117,7 +132,7 @@ const projects = [
         awards: ["Achieved 100/100 points as Final Project - ECON 2250"],
     },
     {
-        id: 6,
+        id: 7,
         title: "Model complicated Random Variables with R",
         description:
             'This is the final project for "MATH 3215: Probabilities and Statistic" taught by Dr. Manh Khang Huynh. This is the best Math class that I have taken at Georgia Tech so far! (I also attach my note for this class inside the repository)',
@@ -137,7 +152,7 @@ const projects = [
     },
 
     {
-        id: 7,
+        id: 8,
         title: "The Hardest Game in The World",
         description:
             'A game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
