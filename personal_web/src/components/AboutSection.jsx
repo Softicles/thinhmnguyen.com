@@ -35,8 +35,9 @@ export const AboutSection = () => {
                             Georgia Tech
                         </a>
                         . My current interests are Machine Learning and Software
-                        Engineering. Outside of school, I love
-                        playing piano, badminton, and running. I take pride in my 
+                        Engineering, which I believe have a lot of potential for
+                        innovation and application. Outside of school, I love
+                        playing piano, badminton, and running. I take pride in my
                         personal record of{" "}
                         <a
                             className="marker marker-4"
@@ -44,13 +45,29 @@ export const AboutSection = () => {
                             target="_blank"
                         >
                             23:08 in the 5K
-                        </a>. Currently, I want to learn more about badminton.
+                        </a>. Currently, I'm learning about badminton.
 
                         <br /> <br />I have a big desire to interact with the
                         world. In particular, I like to learn and find ways
                         to apply my skills. For this reason, I enjoy attending
                         class lectures, where I can learn many tips and skills
-                        from the professors. I'm always open to collaboration so 
+                        from the professors. Furthermore, I love chatting with people,
+                        so after classes I am usually spotted working on algorithms at the
+                        {" "}
+                        <a
+                            className="marker marker-1"
+                            href="https://programmingteam.cc.gatech.edu/"
+                            target="_blank"
+                        >
+                            Competitive Programming @ GT
+                        </a>{" "} club or doing projects with friends at{" "}
+                        <a
+                            className="marker marker-2"
+                            href="https://www.linkedin.com/company/supercomputing-gt/posts/?feedView=all"
+                            target="_blank"
+                        >
+                            Supercomputing @ GT
+                        </a>. I'm always open to collaboration so
                         feel free to reach out!
                     </p>
                 </div>
