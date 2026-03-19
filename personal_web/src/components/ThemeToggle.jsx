@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { LightBackground } from "./LightBackground";
+// import { LightBackground } from "./LightBackground";
 
 export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -46,7 +46,7 @@ export const ThemeToggle = () => {
             </button>
 
             {/* Configure background */}
-            {!isDarkMode ? <LightBackground /> : <></>}
+            {/* {!isDarkMode ? <LightBackground /> : <></>} */}
         </div>
     );
 };
