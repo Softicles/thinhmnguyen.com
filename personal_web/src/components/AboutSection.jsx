@@ -63,7 +63,7 @@ export const AboutSection = () => {
                         </a>{" "} club or doing projects with friends at{" "}
                         <a
                             className="marker marker-2"
-                            href="https://www.linkedin.com/company/supercomputing-gt/posts/?feedView=all"
+                            href="https://sucogt.org/"
                             target="_blank"
                         >
                             Supercomputing @ GT
