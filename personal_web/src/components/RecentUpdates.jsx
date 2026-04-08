@@ -38,8 +38,9 @@ const updates = [
     {
         month: "Sep 2025",
         description: (
-            <ul className="text-base text-foreground leading-relaxed list-disc list-inside space-y-2">
+            <ul className="text-base text-foreground leading-relaxed space-y-2">
                 <li>
+                    -{" "}
                     Came back to TA for CS 2050 for Professor{" "}
                     <a
                         className="marker marker-4"
@@ -50,6 +51,7 @@ const updates = [
                     </a>
                 </li>
                 <li>
+                    -{" "}
                     Joined the Liver team advised by{" "}
                     <a
                         className="marker marker-2"
