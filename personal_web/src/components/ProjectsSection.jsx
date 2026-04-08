@@ -5,8 +5,12 @@ import {
     Trophy,
     Youtube,
     Pen,
+    ArrowUp,
 } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
+
+const COLLAPSED_PROJECTS_COUNT = 4;
 
 const projects = [
     {
@@ -169,6 +173,13 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const visibleProjects = isExpanded
+        ? projects
+        : projects.slice(0, COLLAPSED_PROJECTS_COUNT);
+    const canToggle = projects.length > COLLAPSED_PROJECTS_COUNT;
+
     return (
         <section id="projects" className="px-4 relative">
             <div className="container mx-auto max-w-5xl">
@@ -182,7 +193,7 @@ export const ProjectsSection = () => {
                 </p> */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projects.map((project, key) => (
+                    {visibleProjects.map((project, key) => (
                         <div
                             key={key}
                             className="group border border-border-2 bg-card-2 rounded-lg overflow-hidden shadow-xs card-hover"
@@ -198,8 +209,11 @@ export const ProjectsSection = () => {
                             <div className="p-6">
                                 <div className="flex">
                                     <div className="flex space-x-3">
-                                        {project.urls.map(
-                                            ([link, Icon], key) => (
+                                        {project.urls.map((entry, key) => {
+                                            const link = entry[0];
+                                            const IconComponent = entry[1];
+
+                                            return (
                                                 <a
                                                     key={key}
                                                     href={link}
@@ -208,10 +222,10 @@ export const ProjectsSection = () => {
                                         hover:text-primary transition-colors
                                         duration-300"
                                                 >
-                                                    <Icon size={30} />
+                                                    <IconComponent size={30} />
                                                 </a>
-                                            )
-                                        )}
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>
@@ -256,6 +270,18 @@ export const ProjectsSection = () => {
                         </div>
                     ))}
                 </div>
+
+                {canToggle && (
+                    <button
+                        type="button"
+                        onClick={() => setIsExpanded((prev) => !prev)}
+                        className="mt-8 mx-auto block text-sm font-medium hover:underline transition-colors motion-safe:animate-bounce"
+                        aria-expanded={isExpanded}
+                        aria-label={isExpanded ? "Collapse projects" : "Expand projects"}
+                    >
+                        {isExpanded ? "See less" : "See more"}
+                    </button>
+                )}
             </div>
         </section>
     );

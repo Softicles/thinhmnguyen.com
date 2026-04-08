@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer className="py-12 bg-card relative border-t border-transparent justify-between items-center gradient animate-gradientShift">
             <p className="container text-[20] text-muted-foreground space-y-2 inline-block mt-2">
-                This website is inspired by{" "}
+                Inspired by{" "}
                 <a
                     className="marker marker-1 font-semibold"
                     href="https://www.alexkarpekov.com/"
@@ -12,7 +12,7 @@ export const Footer = () => {
                 >
                     Alexander Karpekov
                 </a>{" "}
-                and built using{" "}
+                and built with{" "}
                 <a
                     className="marker marker-2 italic"
                     href="https://react.dev/"
