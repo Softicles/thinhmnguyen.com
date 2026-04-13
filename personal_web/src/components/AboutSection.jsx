@@ -34,8 +34,7 @@ export const AboutSection = () => {
                         >
                             Georgia Tech
                         </a>
-                        . My current interests are Machine Learning and Software
-                        Engineering, which I believe have a lot of potential for
+                        . My current interests are Machine Learning and High Performance Computing, which I believe have a lot of potential for
                         innovation and application. Outside of school, I love
                         playing piano, badminton, and running. I take pride in my
                         personal record of{" "}
@@ -45,7 +44,7 @@ export const AboutSection = () => {
                             target="_blank"
                         >
                             23:08 in the 5K
-                        </a>. Currently, I'm learning about badminton.
+                        </a>. 
 
                         <br /> <br />I have a big desire to interact with the
                         world. In particular, I like to learn and find ways
