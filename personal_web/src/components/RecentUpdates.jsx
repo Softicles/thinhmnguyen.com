@@ -26,7 +26,7 @@ const updates = [
             <p className="text-base text-foreground leading-relaxed">
                 Became a Curriculum Officer for{" "}
                 <a
-                    className="marker marker-3"
+                    className="marker marker-2"
                     href="https://sucogt.org/"
                     target="_blank"
                 >
