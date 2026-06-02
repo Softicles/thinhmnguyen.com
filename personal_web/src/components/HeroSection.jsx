@@ -82,15 +82,15 @@ export const HeroSection = () => {
                                     className="md:position-center px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                     target="_blank"
                                 >
-                                    View Resume
+                                    Resume
                                 </a>
 
-                                {/* <Link
+                                <Link
                                     to="/archive"
                                     className="px-3 py-1 text-[19px] rounded-full border border-primary font-bold text-primary hover:bg-primary/10 transition-colors duration-300"
                                 >
-                                    Archive
-                                </Link> */}
+                                    Photo
+                                </Link>
                             </div>
                         </div>
                     </h1>
