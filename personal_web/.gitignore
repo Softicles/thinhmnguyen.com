@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Heavy raw photo originals pulled from Google Drive (compressed copies live in src/assets/photos)
+.photos_raw/
+# Local incremental-cache for the photo optimizer (keyed to local file mtimes)
+src/assets/photos/.optimize_photos.json
+
+# Python bytecode cache
+__pycache__/
+*.pyc
