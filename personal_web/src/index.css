@@ -170,11 +170,16 @@
 
     html {
         @apply scroll-smooth;
+        /* Kill the elastic overscroll past the top/bottom edge (Firefox in
+           particular) so nothing behind the page — e.g. the fixed sky — can
+           peek through in the bounce gap. */
+        overscroll-behavior-y: none;
     }
 
     body {
         @apply bg-background text-foreground transition-colors duration-300;
         font-feature-settings: "rlig" 1, "calt" 1;
+        overscroll-behavior-y: none;
     }
 }
 

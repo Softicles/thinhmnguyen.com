@@ -57,6 +57,8 @@ export default function MagicalAlbum({ pages, onOpenLightbox, onBookStateChange,
   const book3dRef    = useRef(null);
   const spreadRef    = useRef(null);  // wraps both pages; fades in + rises up
   const flipRef      = useRef(null);
+  const frontFaceRef = useRef(null);  // old face, shown 0°→90°
+  const backFaceRef  = useRef(null);  // new face, shown 90°→180°
   const prefersReducedMotion = useRef(
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -97,11 +99,26 @@ export default function MagicalAlbum({ pages, onOpenLightbox, onBookStateChange,
     //   right page (pivot = left edge)  → rotateY -180 (free right edge lifts out)
     //   left  page (pivot = right edge) → rotateY +180 (free left edge lifts out)
     const targetRotation = flipLayer.side === 'right' ? -180 : 180;
+    const leaf  = flipRef.current;
+    const front = frontFaceRef.current;
+    const back  = backFaceRef.current;
 
-    animate(flipRef.current, {
-      rotateY: targetRotation,
+    // Animate a proxy angle and apply it ourselves so we can swap faces exactly
+    // at the 90° edge. We don't rely on backface-visibility: Firefox flattens
+    // these clipped 3D layers and stops honouring it, leaving BOTH faces drawn
+    // at once (the old + new photos overlap → 6 images). Toggling visibility on
+    // the live angle is deterministic in every browser.
+    const proxy = { ry: 0 };
+    animate(proxy, {
+      ry: targetRotation,
       duration: FLIP_DURATION,
       easing: 'easeInOutSine',
+      onUpdate: () => {
+        if (leaf) leaf.style.transform = `rotateY(${proxy.ry}deg)`;
+        const showBack = Math.abs(proxy.ry) >= 90;
+        if (front) front.style.visibility = showBack ? 'hidden'  : 'visible';
+        if (back)  back.style.visibility  = showBack ? 'visible' : 'hidden';
+      },
       onComplete: () => {
         setIsFlipping(false);
         setFlipLayer(null);
@@ -280,43 +297,50 @@ export default function MagicalAlbum({ pages, onOpenLightbox, onBookStateChange,
               transformOrigin: flipLayer.side === 'right' ? 'left center' : 'right center',
             }}
           >
-            {/* ── Front face: old page content (revealed 0° → 90° by backface-visibility) ── */}
-            <div style={{
+            {/* ── Front face: old page content (shown 0° → 90°) ──
+                Visibility is toggled at the 90° edge by the flip animation's onUpdate
+                (see effect above) rather than via backface-visibility, which Firefox
+                drops on these clipped 3D layers — leaving both faces drawn at once. */}
+            <div ref={frontFaceRef} style={{
               position: 'absolute', inset: 0,
               backfaceVisibility: 'hidden',
               WebkitBackfaceVisibility: 'hidden',
-              overflow: 'hidden',
+              visibility: 'visible',
             }}>
-              <img
-                src={flipLayer.side === 'right' ? rightPageImg : leftPageImg}
-                alt="" aria-hidden="true"
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-              />
-              <div style={{ position: 'relative', zIndex: 1, height: '100%' }}>
-                <AlbumPage photos={flipLayer.frontPhotos} side={flipLayer.side} onOpenLightbox={onOpenLightbox} />
+              <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+                <img
+                  src={flipLayer.side === 'right' ? rightPageImg : leftPageImg}
+                  alt="" aria-hidden="true"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+                />
+                <div style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+                  <AlbumPage photos={flipLayer.frontPhotos} side={flipLayer.side} onOpenLightbox={onOpenLightbox} />
+                </div>
               </div>
             </div>
 
-            {/* ── Back face: landing-side content (visible 90° → 180°) ──
-                Pre-rotated 180° so it faces away at rest, faces forward when fully flipped.
-                Shows the page that will be revealed on the opposite side after the turn. */}
-            <div style={{
+            {/* ── Back face: landing-side content (shown 90° → 180°) ──
+                Pre-rotated 180° so its content isn't mirrored once the leaf lands.
+                Hidden until the 90° edge, then revealed by the animation's onUpdate. */}
+            <div ref={backFaceRef} style={{
               position: 'absolute', inset: 0,
               backfaceVisibility: 'hidden',
               WebkitBackfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
-              overflow: 'hidden',
+              visibility: 'hidden',
             }}>
-              <img
-                src={flipLayer.side === 'right' ? leftPageImg : rightPageImg}
-                alt="" aria-hidden="true"
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-              />
-              <div style={{ position: 'relative', zIndex: 1, height: '100%' }}>
-                {flipLayer.side === 'right'
-                  ? <AlbumPage photos={leftPhotos(flipLayer.toIdx)}  side="left"  onOpenLightbox={onOpenLightbox} />
-                  : <AlbumPage photos={rightPhotos(flipLayer.toIdx)} side="right" onOpenLightbox={onOpenLightbox} />
-                }
+              <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+                <img
+                  src={flipLayer.side === 'right' ? leftPageImg : rightPageImg}
+                  alt="" aria-hidden="true"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+                />
+                <div style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+                  {flipLayer.side === 'right'
+                    ? <AlbumPage photos={leftPhotos(flipLayer.toIdx)}  side="left"  onOpenLightbox={onOpenLightbox} />
+                    : <AlbumPage photos={rightPhotos(flipLayer.toIdx)} side="right" onOpenLightbox={onOpenLightbox} />
+                  }
+                </div>
               </div>
             </div>
           </div>
