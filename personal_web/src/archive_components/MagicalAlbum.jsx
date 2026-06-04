@@ -3,9 +3,9 @@ import { animate } from 'animejs';
 import { Icon } from '@iconify/react';
 import AlbumPage from './AlbumPage';
 
-import bookCoverImg from '../assets/book_cover.png';
-import leftPageImg  from '../assets/left_page_empty.png';
-import rightPageImg from '../assets/right_page_empty.png';
+import bookCoverImg from '../assets/book_cover.webp';
+import leftPageImg  from '../assets/left_page_empty.webp';
+import rightPageImg from '../assets/right_page_empty.webp';
 
 const BOOK_RATIO    = 1880 / 1106;
 const FLIP_DURATION = 930; // 1.5× slower turn
