@@ -24,9 +24,9 @@ export const AboutSection = () => {
                             href="https://www.cc.gatech.edu/academics/threads/theory"
                             target="_blank"
                         >
-                            Theory
+                            Machine Learning
                         </a>{" "}
-                        threads at{" "}
+                        concentrations at{" "}
                         <a
                             className="marker marker-3"
                             href="https://www.gatech.edu/"
