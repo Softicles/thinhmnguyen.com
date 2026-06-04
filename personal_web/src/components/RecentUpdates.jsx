@@ -8,15 +8,14 @@ const updates = [
         month: "Feb 2026",
         description: (
             <p className="text-base text-foreground leading-relaxed">
-                Joined{" "}
+                Became an infrastructure developer at {" "}
                 <a
                     className="marker marker-3"
                     href="https://bytefight.org/home"
                     target="_blank"
                 >
                     ByteFight @ GT
-                </a>{" "}
-                as an Infrastructure Dev
+                </a>
             </p>
         ),
     },
@@ -24,7 +23,7 @@ const updates = [
         month: "Jan 2026",
         description: (
             <p className="text-base text-foreground leading-relaxed">
-                Became a Curriculum Officer for{" "}
+                Became a curriculum officer at{" "}
                 <a
                     className="marker marker-2"
                     href="https://sucogt.org/"
@@ -41,7 +40,7 @@ const updates = [
             <ul className="text-base text-foreground leading-relaxed space-y-2">
                 <li>
                     -{" "}
-                    Came back to TA for CS 2050 for Professor{" "}
+                    Came back to TA at CS 2050 for Professor{" "}
                     <a
                         className="marker marker-4"
                         href="https://faculty.cc.gatech.edu/~ladha/"
@@ -52,7 +51,7 @@ const updates = [
                 </li>
                 <li>
                     -{" "}
-                    Joined the Liver team advised by{" "}
+                    Interned at Emory as an ML engineer - Liver team, advised by{" "}
                     <a
                         className="marker marker-2"
                         href="https://med.emory.edu/directory/profile/?u=MMKAZIM"
@@ -97,7 +96,7 @@ const updates = [
                     target="_blank"
                 >
                     Fine-tuned a PaddleOCR model
-                </a>{" "}
+                </a>,{" "}
                 advised by Professor{" "}
                 <a
                     className="marker marker-1"
@@ -113,7 +112,7 @@ const updates = [
         month: "May 2025",
         description: (
             <p className="text-base text-foreground leading-relaxed">
-                Became a Teaching Assistant for CS 2050 - Discrete Math for
+                Became a teaching assistant at CS 2050 - Discrete Math for
                 Professor{" "}
                 <a
                     className="marker marker-4"
