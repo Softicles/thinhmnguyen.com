@@ -134,7 +134,13 @@ function FallingRain({ active, density, seed = 1 }) {
   }, [seed]);
 
   useFrame((state, delta) => {
-    currentOpacity.current = THREE.MathUtils.lerp(currentOpacity.current, targetOpacity, delta * 4);
+    // Clamp delta so a single frame can never jump too far. After the tab is
+    // throttled or the machine sleeps, the first frame's delta is the whole
+    // elapsed time (seconds). Without this clamp every drop falls past the wrap
+    // threshold in one frame and resets to the same height, collapsing the rain
+    // into one synchronized sheet.
+    const dt = Math.min(delta, 1 / 30);
+    currentOpacity.current = THREE.MathUtils.lerp(currentOpacity.current, targetOpacity, dt * 4);
     if (!pointsRef.current) return;
 
     // Apply the fade every frame so rain smoothly appears when it starts and
@@ -151,7 +157,7 @@ function FallingRain({ active, density, seed = 1 }) {
        // Only animate the visible drops.
        for(let i=1; i < drawCount * 3; i+=3) {
            // 3. Changed fall amount from 15 to 6 to feel much slower
-           pos[i] -= delta * 6;
+           pos[i] -= dt * 6;
            if(pos[i] < -20) pos[i] = 20;
        }
        pointsRef.current.geometry.attributes.position.needsUpdate = true;
