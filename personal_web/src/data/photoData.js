@@ -36,6 +36,15 @@ const photoMeta = [
   { filename: 'IMG_1461.jpg', title: '', date: '2025-12-21', location: '', description: '' },
   { filename: 'IMG_1462.jpg', title: '', date: '2025-12-21', location: '', description: '' },
   { filename: 'IMG_1729.jpg', title: '', date: '2026-06-02', location: '', description: '' },
+  { filename: 'IMG_0296.jpg', title: '', date: '2023-11-19', location: '', description: '' },
+  { filename: 'IMG_0303.jpg', title: '', date: '2023-11-19', location: '', description: '' },
+  { filename: 'IMG_0317.jpg', title: '', date: '2023-11-23', location: '', description: '' },
+  { filename: 'IMG_0536.jpg', title: '', date: '2024-03-09', location: '', description: '' },
+  { filename: 'IMG_0985.jpg', title: '', date: '2024-12-17', location: '', description: '' },
+  { filename: 'IMG_1043.jpg', title: '', date: '2025-01-10', location: '', description: '' },
+  { filename: 'IMG_1047.jpg', title: '', date: '2025-01-10', location: '', description: '' },
+  { filename: 'IMG_1589.jpg', title: '', date: '2026-03-20', location: '', description: '' },
+  { filename: 'IMG_1771.jpg', title: '', date: '2026-05-29', location: '', description: '' },
 ];
 
 export const photos = photoMeta

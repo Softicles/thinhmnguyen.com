@@ -44,5 +44,25 @@ log "===== starting sync ====="
 "$PY" "$REPO_DIR/scripts/optimize_photos.py" \
   --src "$RAW" --dest "$DEST" --prune >> "$LOG" 2>&1
 
+# --- Stage 3: add photoData.js entries (EXIF capture date) for new photos -----
+# Append-only: existing entries (curated dates/metadata, commented-out photos)
+# are never touched; only genuinely new files get an entry.
+"$PY" "$REPO_DIR/scripts/update_photo_data.py" \
+  --raw "$RAW" --dest "$DEST" --data "$REPO_DIR/src/data/photoData.js" >> "$LOG" 2>&1
+
+# --- Stage 4: auto-commit & push photo changes -------------------------------
+git -C "$REPO_DIR" add src/assets/photos src/data/photoData.js
+if git -C "$REPO_DIR" diff --cached --quiet; then
+  log "no photo changes to commit"
+else
+  if git -C "$REPO_DIR" commit -q \
+        -m "chore: auto-sync photos ($(date '+%Y-%m-%d'))" \
+        -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" >> "$LOG" 2>&1 \
+     && git -C "$REPO_DIR" push >> "$LOG" 2>&1; then
+    log "committed & pushed photo changes"
+  else
+    log "ERROR: git commit/push failed (changes may be staged/committed locally)"
+  fi
+fi
+
 log "===== sync finished ====="
-log "Review/commit changes in src/assets/photos, then add any new photos to src/data/photoData.js (photoMeta)."
