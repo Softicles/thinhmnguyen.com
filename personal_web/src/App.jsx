@@ -15,6 +15,17 @@ const ArchiveWithTransition = lazy(() =>
     import("./pages/Archive").then((m) => ({ default: transition(m.Archive) }))
 );
 
+// Full-screen cover shown while the lazy Archive chunk downloads on first visit.
+// The sky background is rendered behind the router (z-index:-1) and persists
+// across navigation, so a `null` fallback would leave it uncovered during the
+// load gap — on a cold/hard-reloaded cache the sky gets revealed before the
+// page's slide transition has finished. Matching the transition panel's colour
+// keeps the screen continuously covered until Archive mounts and its slide-out
+// reveal plays.
+const RouteCover = () => (
+    <div style={{ position: "fixed", inset: 0, background: "#0f0f0f", zIndex: 9999 }} />
+);
+
 export default function App() {
     const location = useLocation();
     const HomeWithTransition = transition(Home);
@@ -27,10 +38,10 @@ export default function App() {
                     <Route
                         path="archive"
                         element={
-                            // null fallback: the persistent sky background lives
-                            // outside the router, so nothing flashes while the
-                            // archive chunk loads on first visit.
-                            <Suspense fallback={null}>
+                            // Cover the screen while the archive chunk loads so
+                            // the persistent sky (rendered behind the router) is
+                            // not revealed before the slide transition runs.
+                            <Suspense fallback={<RouteCover />}>
                                 <ArchiveWithTransition />
                             </Suspense>
                         }
