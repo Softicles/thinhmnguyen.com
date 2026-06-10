@@ -6,8 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Thinh Nguyen — BSCS Student at Georgia Tech</title>
     </head>
-    <body>
-        <div id="root"></div>
+    <!-- Black from the very first paint: the app's theme background is applied by
+         JS-injected CSS, so without this the browser shows a white flash before
+         React mounts the (black) route cover. The placeholder inside #root keeps
+         the screen black until React's first render replaces it with RouteCover. -->
+    <body style="background: #0f0f0f">
+        <div id="root">
+            <div style="position: fixed; inset: 0; background: #0f0f0f"></div>
+        </div>
         <script type="module" src="/src/main.jsx"></script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import avatar from "./imgs/IMG_2763_cropped.jpg";
+import avatar from "./imgs/IMG_2763_cropped.webp";
 import { cn } from "@/lib/utils";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";

@@ -18,7 +18,7 @@ const projects = [
         title: "AI Calendar",
         description:
             "A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar.",
-        image: "/projects/ai_calendar.png",
+        image: "/projects/ai_calendar.webp",
         tags: [
             "Python",
             "JavaScript",
@@ -42,7 +42,7 @@ const projects = [
         title: "Movie Store",
         description:
             "A full-stack Django movie store website. I used the Master-Agent Architecture (two EC2s + two EFSs) combined with Jenkins and Docker to deploy this website onto AWS.",
-        image: "/projects/movie_store.png",
+        image: "/projects/movie_store.webp",
         tags: ["Python", "Django", "SQLite", "Terraform", "AWS", "Docker"],
         urls: [
             [
@@ -62,7 +62,7 @@ const projects = [
         id: 3,
         title: "Markov Decision Model with multiple observation processes",
         description: `Found a ghost in the TextWorld environment using Hidden Markov Models with Multiple Observation Processes (task 2 - part A). I read the paper "Hidden Markov Models with Multiple Observation Prrocesses" by James Yuanjie Zhao to understand the algorithm and implemented it from scratch in Python.`,
-        image: "/projects/text_world.jpg",
+        image: "/projects/text_world.webp",
         tags: [
             "Python",
             "TextWorld",
@@ -77,7 +77,7 @@ const projects = [
         id: 4,
         title: "Fine-tuning a PaddleOCR model",
         description: `The English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I re-train the model using my notes from the classes I took at Georgia Tech.`,
-        image: "/projects/finetune_ocr.png",
+        image: "/projects/finetune_ocr.webp",
         tags: [
             "Python",
             "PaddlePaddle",
@@ -94,7 +94,7 @@ const projects = [
         title: "Breast Cancer Classifer",
         description:
             "I solved the Breast Cancer Classifier problem using a ResNet18.",
-        image: "/projects/train_loss.png",
+        image: "/projects/train_loss.webp",
         tags: [
             "Python",
             "Sckit-learn",
@@ -120,7 +120,7 @@ const projects = [
         title: "EPL Payroll vs Performance",
         description:
             "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
-        image: "/projects/epl_analysis.png",
+        image: "/projects/epl_analysis.webp",
         tags: ["R", "RStudio", "Excel"],
         urls: [
             [
@@ -140,7 +140,7 @@ const projects = [
         title: "Model complicated Random Variables with R",
         description:
             'This is the final project for "MATH 3215: Probabilities and Statistic" taught by Dr. Manh Khang Huynh. This is the best Math class that I have taken at Georgia Tech so far! (I also attach my note for this class inside the repository)',
-        image: "/projects/plot_of_N10_problem_6.png",
+        image: "/projects/plot_of_N10_problem_6.webp",
         tags: ["R", "RStudio"],
         urls: [
             [
@@ -160,7 +160,7 @@ const projects = [
         title: "The Hardest Game in The World",
         description:
             'A game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
-        image: "/projects/hardest_game.png",
+        image: "/projects/hardest_game.webp",
         tags: ["C", "mGBA", "Docker"],
         urls: [
             [

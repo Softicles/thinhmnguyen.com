@@ -1,11 +1,31 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { AnimatePresence } from "framer-motion";
 import transition from './transition';
 import { SceneProvider } from "./utils/SceneContext";
 import SceneBackground from "./components/SceneBackground";
+import avatar from "./components/imgs/IMG_2763_cropped.webp";
+
+// Resolve once the image at `src` has been fetched + decoded (or failed). Used
+// to keep a route's cover up until its above-the-fold image is ready to paint.
+const preloadImage = (src) =>
+    new Promise((resolve) => {
+        const img = new Image();
+        img.onload = img.onerror = () => resolve();
+        img.src = src;
+    });
+
+// Home is gated behind the same lazy + Suspense cover as Archive so the slide
+// transition never reveals a half-painted page. Archive's cover holds until its
+// chunk downloads; Home's holds until the hero avatar (its only above-the-fold
+// image) is decoded, so the reveal doesn't expose the avatar popping in. The
+// avatar URL is imported above so the preload can start immediately.
+const HomeWithTransition = lazy(() =>
+    Promise.all([import("./pages/Home"), preloadImage(avatar)]).then(
+        ([m]) => ({ default: transition(m.Home) })
+    )
+);
 
 // The Archive page pulls in the photo album (anime.js, photo data, lightbox,
 // control panel, …) that is only ever used on /archive. Lazy-load it so none of
@@ -28,13 +48,22 @@ const RouteCover = () => (
 
 export default function App() {
     const location = useLocation();
-    const HomeWithTransition = transition(Home);
     return (
         <SceneProvider>
             <SceneBackground />
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
-                    <Route index element={<HomeWithTransition />} />
+                    <Route
+                        index
+                        element={
+                            // Keep the screen covered until Home's chunk loads
+                            // and its hero image is decoded, so the slide reveal
+                            // doesn't expose the page mid-load (mirrors Archive).
+                            <Suspense fallback={<RouteCover />}>
+                                <HomeWithTransition />
+                            </Suspense>
+                        }
+                    />
                     <Route
                         path="archive"
                         element={
