@@ -225,8 +225,17 @@ export default function SkyScene({
   particleDensity = 0.6,
   particleColor = '#fbbf24',
   seed = 1,
+  onReady,
 }) {
   const isSunny = weather === 'sunny';
+
+  // Fire onReady a couple of frames after the renderer is created, so the
+  // clouds/rain instances have actually been drawn (not just the bare canvas)
+  // before the page transition uncovers the scene.
+  const handleCreated = () => {
+    if (!onReady) return;
+    requestAnimationFrame(() => requestAnimationFrame(() => onReady()));
+  };
   const bgStyle = {
     position: 'fixed', inset: 0, zIndex: -1,
     background: isSunny
@@ -240,7 +249,7 @@ export default function SkyScene({
         {/* The Canvas lives at the app level and keeps animating across route
             changes, so the environment stays alive (no freeze, no component
             reset) when returning to the portfolio. */}
-        <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
+        <Canvas camera={{ position: [0, 0, 10], fov: 60 }} onCreated={handleCreated}>
           <ambientLight intensity={isSunny ? 1.0 : 0.6} />
           <directionalLight position={[10, 10, 5]} intensity={isSunny ? 1.5 : 0.4} color={isSunny ? "#fde68a" : "#cbd5e1"} />
           <VolumetricClouds density={cloudDensity} whiteness={cloudWhiteness} seed={seed} />

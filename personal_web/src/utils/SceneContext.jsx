@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import useAudioPlayer from './useAudioPlayer';
 
 // Holds the /archive control-panel configuration (weather + cloud/particle
@@ -38,6 +38,14 @@ export function SceneProvider({ children }) {
   // across route changes.
   const audio = useAudioPlayer();
 
+  // True once the Three.js sky has painted its first frame. The page transition
+  // holds its cover until this flips, so the slide reveal never exposes a sky
+  // that hasn't rendered its clouds/rain yet (which looked like them vanishing).
+  // It only matters on a cold load — the scene stays mounted across navigation,
+  // so it remains true thereafter and never re-gates later transitions.
+  const [sceneReady, setSceneReady] = useState(false);
+  const markSceneReady = useCallback(() => setSceneReady(true), []);
+
   // Persist the scene config so it's restored after a reload too.
   useEffect(() => {
     try {
@@ -55,6 +63,8 @@ export function SceneProvider({ children }) {
     setParticleDensity: (particleDensity) => setScene((s) => ({ ...s, particleDensity })),
     setParticleColor: (particleColor) => setScene((s) => ({ ...s, particleColor })),
     audio,
+    sceneReady,
+    markSceneReady,
   };
 
   return <SceneContext.Provider value={value}>{children}</SceneContext.Provider>;
