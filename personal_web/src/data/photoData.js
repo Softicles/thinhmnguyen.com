@@ -48,6 +48,10 @@ const photoMeta = [
   { filename: 'IMG_1753.jpg', title: '', date: '2026-05-16', location: '', description: '' },
   { filename: 'IMG_1783.jpg', title: '', date: '2026-06-02', location: '', description: '' },
   { filename: 'IMG_1802.jpg', title: '', date: '2026-06-08', location: '', description: '' },
+  { filename: 'IMG_1492.jpg', title: '', date: '2026-01-05', location: '', description: '' },
+  { filename: 'IMG_1700.jpg', title: '', date: '2026-04-25', location: '', description: '' },
+  { filename: 'IMG_1701.jpg', title: '', date: '2026-04-25', location: '', description: '' },
+  { filename: 'IMG_1711.jpg', title: '', date: '2026-04-25', location: '', description: '' },
 ];
 
 export const photos = photoMeta
