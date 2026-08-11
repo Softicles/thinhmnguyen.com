@@ -75,6 +75,7 @@ const photoMeta = [
   { filename: 'IMG_2089.jpg', title: '', date: '2026-08-02', location: '', description: '' },
   { filename: 'IMG_2090.jpg', title: '', date: '2026-08-02', location: '', description: '' },
   { filename: 'IMG_2091.jpg', title: '', date: '2026-08-03', location: '', description: '' },
+  { filename: 'IMG_2129.jpg', title: '', date: '2026-08-10', location: '', description: '' },
 ];
 
 export const photos = photoMeta
