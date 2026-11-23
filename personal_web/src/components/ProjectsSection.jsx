@@ -15,9 +15,43 @@ const COLLAPSED_PROJECTS_COUNT = 4;
 const projects = [
     {
         id: 1,
+        title: "Fine-tuning a PaddleOCR model",
+        description: `The English ultra-lightweight PP-OCRv3 model cannot reliably recognize my own handwriting. Therefore, I made a new dataset from my lecture notes at Georgia Tech and fine-tuned the model using its provided source code.`,
+        image: "/projects/finetune_ocr.webp",
+        tags: [
+            "Python",
+            "PaddlePaddle",
+            "PPOCRLabel",
+            "OpenAI API",
+            "PIL",
+            "Linux",
+        ],
+        urls: [["https://github.com/Softicles/Fine-tuning_an_OCR", GithubIcon]],
+        awards: ["Achieved 90% reduction in loss value"],
+    },
+
+    {
+        id: 2,
+        title: "Markov Decision Model with multiple observation processes",
+        description: `I read the paper "Hidden Markov Models with Multiple Observation Prrocesses" by James Yuanjie Zhao to implement a hidden Markov model that outputs the distribution of the Ghost's correct position in the world of TextWorld.`,
+        image: "/projects/text_world_hmm.webp",
+        // Wide notebook screenshot: keep the start of the code lines in view.
+        imagePosition: "object-left",
+        tags: [
+            "Python",
+            "TextWorld",
+            "numpy",
+            "pgmpy",
+        ],
+        urls: [["https://github.com/Softicles/CS-3600-HW3", GithubIcon], ["https://arxiv.org/abs/2210.09381", Pen]],
+        awards: ["Achieved > 97% accuracy on ghost spotting"],
+    },
+
+    {
+        id: 3,
         title: "AI Calendar",
         description:
-            "A website that can create events based on text inputs or PDF documents and automatically import them into users’ Google Calendar.",
+            "A website that can make a plan for users based on their availability descriptions and auto-import it into their virtual calendars.",
         image: "/projects/ai_calendar.webp",
         tags: [
             "Python",
@@ -34,92 +68,14 @@ const projects = [
             ["https://aicalendar.art", ExternalLink],
             ["https://github.com/Softicles/Continue-AI-Calendar", GithubIcon],
         ],
-        awards: ["One of the best prototypes for CS 2340 - Final Project"],
-    },
-
-    {
-        id: 2,
-        title: "Movie Store",
-        description:
-            "A full-stack Django movie store website. I used the Master-Agent Architecture (two EC2s + two EFSs) combined with Jenkins and Docker to deploy this website onto AWS.",
-        image: "/projects/movie_store.webp",
-        tags: ["Python", "Django", "SQLite", "Terraform", "AWS", "Docker"],
-        urls: [
-            [
-                "http://ec2-44-251-8-106.us-west-2.compute.amazonaws.com/",
-                ExternalLink,
-            ],
-            ["https://github.com/Softicles/moviestore_with_aws", GithubIcon],
-            [
-                "https://aws.plainenglish.io/mastering-jenkins-cost-efficiency-scalable-ci-cd-with-aws-ecs-master-agent-architecture-d157b3788474",
-                Pen,
-            ],
-        ],
-        awards: ["Achieved 100/100 points as Midterm Project - CS 2340"],
-    },
-
-    {
-        id: 3,
-        title: "Markov Decision Model with multiple observation processes",
-        description: `Found a ghost in the TextWorld environment using Hidden Markov Models with Multiple Observation Processes (task 2 - part A). I read the paper "Hidden Markov Models with Multiple Observation Prrocesses" by James Yuanjie Zhao to understand the algorithm and implemented it from scratch in Python.`,
-        image: "/projects/text_world.webp",
-        tags: [
-            "Python",
-            "TextWorld",
-            "numpy",
-            "pgmpy",
-        ],
-        urls: [["https://github.com/Softicles/CS-3600-HW3", GithubIcon], ["https://arxiv.org/abs/2210.09381", Pen]],
-        awards: ["Achieved more than 96% accuracy on the test set"],
+        awards: ["One of the best Final Projects in CS 2340"],
     },
 
     {
         id: 4,
-        title: "Fine-tuning a PaddleOCR model",
-        description: `The English ultra-lightweight PP-OCRv3 model is terrible at recognizing my own handwriting. For this reason, I re-train the model using my notes from the classes I took at Georgia Tech.`,
-        image: "/projects/finetune_ocr.webp",
-        tags: [
-            "Python",
-            "PaddlePaddle",
-            "PPOCRLabel",
-            "OpenAI API",
-            "PIL",
-            "Linux",
-        ],
-        urls: [["https://github.com/Softicles/Fine-tuning_an_OCR", GithubIcon]],
-        awards: ["Achieved 90% reduction in loss value"],
-    },
-    {
-        id: 5,
-        title: "Breast Cancer Classifer",
-        description:
-            "I solved the Breast Cancer Classifier problem using a ResNet18.",
-        image: "/projects/train_loss.webp",
-        tags: [
-            "Python",
-            "Sckit-learn",
-            "Pandas",
-            "Seaborn",
-            "Pytorch",
-            "Matlotlib",
-        ],
-        urls: [
-            [
-                "https://github.com/Softicles/Breast_Cancer_Classifier/blob/main/Breast-Cancer-Classifier.ipynb",
-                FileText,
-            ],
-            [
-                "https://www.kaggle.com/competitions/breast-cancer-classification",
-                Pen,
-            ],
-        ],
-        awards: ["Achieved around 92% accuracy"],
-    },
-    {
-        id: 6,
         title: "EPL Payroll vs Performance",
         description:
-            "I did some statistical analysis to explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
+            "I explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
         image: "/projects/epl_analysis.webp",
         tags: ["R", "RStudio", "Excel"],
         urls: [
@@ -133,13 +89,14 @@ const projects = [
             ],
             ["https://youtu.be/08_uHv_Ve2s", Youtube],
         ],
-        awards: ["Achieved 100/100 points as Final Project - ECON 2250"],
+        awards: ["100/100 points Final Project in ECON 2250"],
     },
+
     {
-        id: 7,
+        id: 5,
         title: "Model complicated Random Variables with R",
         description:
-            'This is the final project for "MATH 3215: Probabilities and Statistic" taught by Dr. Manh Khang Huynh. This is the best Math class that I have taken at Georgia Tech so far! (I also attach my note for this class inside the repository)',
+            'The best theoretical class I have took so far at Tech. The Project includes, to name but a few, interesting problems such as recovering the degree of a noisy polynomial random model and simulating then proving a "Car Crash" event follows a well-known distribution.',
         image: "/projects/plot_of_N10_problem_6.webp",
         tags: ["R", "RStudio"],
         urls: [
@@ -156,10 +113,10 @@ const projects = [
     },
 
     {
-        id: 8,
+        id: 6,
         title: "The Hardest Game in The World",
         description:
-            'A game in Game Boy Advance (GBA) style that I made as a submission for Homework 6 at "CS 2110: Computer Organization & Programming" at Georgia Tech.',
+            'A funky game in Game Boy Advance (GBA) style.',
         image: "/projects/hardest_game.webp",
         tags: ["C", "mGBA", "Docker"],
         urls: [
@@ -168,7 +125,7 @@ const projects = [
                 GithubIcon,
             ],
         ],
-        awards: ["Achieved 105/100 points for HW6 - CS 2110"],
+        awards: ["105/100 points Final Project in CS 2110"],
     },
 ];
 
@@ -202,7 +159,7 @@ export const ProjectsSection = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className={cn("w-full h-full object-cover transition-transform duration-500 group-hover:scale-105", project.imagePosition)}
                                 />
                             </div>
 

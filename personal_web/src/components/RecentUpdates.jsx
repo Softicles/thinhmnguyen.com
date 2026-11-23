@@ -38,20 +38,10 @@ const updates = [
         month: "Sep 2025",
         description: (
             <ul className="text-base text-foreground leading-relaxed space-y-2">
+               
                 <li>
-                    -{" "}
-                    Came back to TA at CS 2050 for Professor{" "}
-                    <a
-                        className="marker marker-4"
-                        href="https://faculty.cc.gatech.edu/~ladha/"
-                        target="_blank"
-                    >
-                        Abrahim Ladha
-                    </a>
-                </li>
-                <li>
-                    -{" "}
-                    Interned at Emory as an ML engineer - Liver team, advised by{" "}
+                    {" "}
+                    Joined {" "}
                     <a
                         className="marker marker-2"
                         href="https://med.emory.edu/directory/profile/?u=MMKAZIM"
@@ -66,46 +56,9 @@ const updates = [
                         target="_blank"
                     >
                         Dr. Michael West
-                    </a>
+                    </a> to research Liver Donor-Patient Matching at Emory 
                 </li>
             </ul>
-        ),
-    },
-    {
-        month: "Aug 2025",
-        description: (
-            <p className="text-base text-foreground leading-relaxed">
-                Deployed{" "}
-                <a
-                    className="marker marker-3"
-                    href="https://www.aicalendar.art/"
-                    target="_blank"
-                >
-                    AI Calendar
-                </a>{" "}
-            </p>
-        ),
-    },
-    {
-        month: "Jul 2025",
-        description: (
-            <p className="text-base text-foreground leading-relaxed">
-                <a
-                    className="marker marker-2"
-                    href="https://github.com/Softicles/Fine-tuning_an_OCR"
-                    target="_blank"
-                >
-                    Fine-tuned a PaddleOCR model
-                </a>,{" "}
-                advised by Professor{" "}
-                <a
-                    className="marker marker-1"
-                    href="https://www.alexkarpekov.com/"
-                    target="_blank"
-                >
-                    Alexander Karpekov
-                </a>
-            </p>
         ),
     },
     {
@@ -113,7 +66,13 @@ const updates = [
         description: (
             <p className="text-base text-foreground leading-relaxed">
                 Became a teaching assistant at CS 2050 - Discrete Math for
-                Professor{" "}
+                Professor{" "} <a
+                        className="marker marker-4"
+                        href="https://faculty.cc.gatech.edu/~ladha/"
+                        target="_blank"
+                    >
+                        Abrahim Ladha
+                    </a> and Professor
                 <a
                     className="marker marker-4"
                     href="https://www.cc.gatech.edu/people/ronnie-howard"
