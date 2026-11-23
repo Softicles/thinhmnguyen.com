@@ -3,7 +3,6 @@ import {
     ExternalLink,
     FileText,
     Trophy,
-    Youtube,
     Pen,
     ArrowUp,
 } from "lucide-react";
@@ -32,11 +31,19 @@ const projects = [
 
     {
         id: 2,
+        title: "Symbolic Regression with Multi-Objective Genetic Programming",
+        description: `I used Genetic Algorithms aiming to recreate a polynomial I came up in the beginning. The polynomials are modeled with Expression Tree, then evolved over 50 generations with 500 candidates/generation.`,
+        image: "/projects/symbolic_regression_mogp.webp",
+        tags: ["Python", "DEAP", "NumPy", "Matplotlib", "NSGA-II"],
+        urls: [["https://github.com/Softicles/symbolic-regression-mogp", GithubIcon]],
+        awards: ["Reduced RMSE by 98% with a 22-node expression"],
+    },
+
+    {
+        id: 3,
         title: "Markov Decision Model with multiple observation processes",
         description: `I read the paper "Hidden Markov Models with Multiple Observation Prrocesses" by James Yuanjie Zhao to implement a hidden Markov model that outputs the distribution of the Ghost's correct position in the world of TextWorld.`,
-        image: "/projects/text_world_hmm.webp",
-        // Wide notebook screenshot: keep the start of the code lines in view.
-        imagePosition: "object-left",
+        image: "/projects/text_world_hmm_figure.webp",
         tags: [
             "Python",
             "TextWorld",
@@ -48,7 +55,7 @@ const projects = [
     },
 
     {
-        id: 3,
+        id: 4,
         title: "AI Calendar",
         description:
             "A website that can make a plan for users based on their availability descriptions and auto-import it into their virtual calendars.",
@@ -72,32 +79,13 @@ const projects = [
     },
 
     {
-        id: 4,
-        title: "EPL Payroll vs Performance",
-        description:
-            "I explore the relationship between a team’s payroll and its performance in the English Premier League (EPL). Does a high-value team imply a good seasonal performance?",
-        image: "/projects/epl_analysis.webp",
-        tags: ["R", "RStudio", "Excel"],
-        urls: [
-            [
-                "https://github.com/Softicles/EPL-payroll-points-analysis",
-                GithubIcon,
-            ],
-            [
-                "https://github.com/Softicles/EPL-payroll-points-analysis/blob/main/EPL_payroll_vs_points_analysis.pdf",
-                FileText,
-            ],
-            ["https://youtu.be/08_uHv_Ve2s", Youtube],
-        ],
-        awards: ["100/100 points Final Project in ECON 2250"],
-    },
-
-    {
         id: 5,
         title: "Model complicated Random Variables with R",
         description:
             'The best theoretical class I have took so far at Tech. The Project includes, to name but a few, interesting problems such as recovering the degree of a noisy polynomial random model and simulating then proving a "Car Crash" event follows a well-known distribution.',
-        image: "/projects/plot_of_N10_problem_6.webp",
+        image: "/projects/plot_of_N10_problem_6_card.webp",
+        // Tall plot on a wide card: show all of it on white instead of cropping.
+        imagePosition: "object-contain bg-white",
         tags: ["R", "RStudio"],
         urls: [
             [
