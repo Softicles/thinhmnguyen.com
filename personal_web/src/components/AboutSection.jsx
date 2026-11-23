@@ -34,8 +34,7 @@ export const AboutSection = () => {
                         >
                             Georgia Tech
                         </a>
-                        . My current interests are Machine Learning and High Performance Computing, which I believe have a lot of potential for
-                        innovation and application. Outside of school, I love
+                        . My current interests are Machine Learning and Artificial Intelligence. Outside of school, I love
                         playing piano, badminton, and running. I take pride in my
                         personal record of{" "}
                         <a
@@ -44,30 +43,12 @@ export const AboutSection = () => {
                             target="_blank"
                         >
                             23:08 in the 5K
-                        </a>. 
-
-                        <br /> <br />I have a big desire to interact with the
-                        world. In particular, I like to learn and find ways
-                        to apply my skills. For this reason, I enjoy attending
-                        class lectures, where I can learn many tips and skills
-                        from the professors. Furthermore, I love chatting with people,
-                        so after classes I am usually spotted working on algorithms at the
-                        {" "}
-                        <a
-                            className="marker marker-1"
-                            href="https://programmingteam.cc.gatech.edu/"
-                            target="_blank"
-                        >
-                            Competitive Programming @ GT
-                        </a>{" "} club or doing projects with friends at{" "}
-                        <a
-                            className="marker marker-2"
-                            href="https://sucogt.org/"
-                            target="_blank"
-                        >
-                            Supercomputing @ GT
-                        </a>. I'm always open to collaboration so
-                        feel free to reach out!
+                        </a> 😊.
+                        
+                        <br /> <br />
+                        If you want to find me in the academic semester, there is a high chance that 
+                        I would be at Georgia Tech's CRC or the College of Computing.
+                        I'm always open to collaboration so feel free to reach out!
                     </p>
                 </div>
             </div>

@@ -6,11 +6,12 @@ import { useScene } from '../utils/SceneContext';
 // shape and position — and keep animating — when leaving /archive and coming
 // back, so the environment is never frozen or reset.
 export default function SceneBackground() {
-  const { weather, cloudDensity, cloudWhiteness, particleDensity, particleColor, seed, markSceneReady } = useScene();
+  const { weather, timeOfDay, cloudDensity, cloudWhiteness, particleDensity, particleColor, seed, markSceneReady } = useScene();
 
   return (
     <SkyScene
       weather={weather}
+      timeOfDay={timeOfDay}
       cloudDensity={cloudDensity}
       cloudWhiteness={cloudWhiteness}
       particleDensity={particleDensity}

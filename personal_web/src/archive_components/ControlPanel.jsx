@@ -69,11 +69,54 @@ function Slider({ icon, label, value, onChange }) {
   );
 }
 
+// Names for where the sun is, in the order it passes through them.
+const DAY_PHASES = [
+  [0.15, 'Midday'],
+  [0.4, 'Afternoon'],
+  [0.58, 'Golden hour'],
+  [0.72, 'Sunset'],
+  [0.88, 'Dusk'],
+  [Infinity, 'Night'],
+];
+const phaseName = (t) => DAY_PHASES.find(([max]) => t < max)[1];
+
+// Drag the sun from midday down past the horizon into night. The track is
+// painted with the sky it will produce, so the control previews its result.
+function DaylightSlider({ value, onChange }) {
+  const phase = phaseName(value);
+  return (
+    <label className="magic-slider-row">
+      <span className="magic-slider-label">
+        <Icon icon="mdi:weather-sunset" width={14} height={14} />
+        Time of day
+        <span className="magic-slider-value">{phase}</span>
+      </span>
+      <span className="magic-daylight">
+        <Icon icon="mdi:white-balance-sunny" width={14} height={14} aria-hidden="true" />
+        <input
+          type="range"
+          className="magic-slider magic-slider-daylight"
+          min={0}
+          max={1}
+          step={0.005}
+          value={value}
+          onChange={(e) => onChange(parseFloat(e.target.value))}
+          aria-label="Time of day"
+          aria-valuetext={phase}
+        />
+        <Icon icon="mdi:weather-night" width={14} height={14} aria-hidden="true" />
+      </span>
+    </label>
+  );
+}
+
 export default function ControlPanel({
   open,
   onOpenChange,
   weather,
   onWeatherChange,
+  timeOfDay,
+  onTimeOfDay,
   cloudDensity,
   onCloudDensity,
   cloudWhiteness,
@@ -158,6 +201,7 @@ export default function ControlPanel({
               <Icon icon="mdi:weather-rainy" width={16} height={16} /> Raining
             </button>
           </div>
+          <DaylightSlider value={timeOfDay} onChange={onTimeOfDay} />
         </div>
 
         {/* Environment sliders */}

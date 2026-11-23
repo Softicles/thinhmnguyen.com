@@ -144,11 +144,13 @@
         --border-icon: 53.87 100% 73.14%;
 
         --card-1: transparent;
-        --border-1: 25 100% 85.2%;
+        /* No coloured section borders / timeline line in dark mode. Kept as a
+           valid zero-alpha colour (not `transparent`) so hsl(var(...)) still parses. */
+        --border-1: 0 0% 0% / 0;
         --card-2: 222 47% 8%;
-        --border-2: 192 100% 34.5%;
+        --border-2: 0 0% 0% / 0;
         --card-3: transparent;
-        --border-3: 98 100% 46.3%;
+        --border-3: 0 0% 0% / 0;
 
         --marker-1: 234 80.9% 51.6%;
         --marker-2: 189 100% 34%;

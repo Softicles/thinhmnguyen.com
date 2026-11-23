@@ -471,3 +471,153 @@
     width: 220px;
   }
 }
+/* ─── Sky: backdrop, stars, sun (painted per-frame by SkyScene) ─── */
+.sky-root {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #6fa8e6;
+}
+
+.sky-backdrop,
+.sky-stars,
+.sky-sun-track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sky-stars {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* Full-viewport track: translating it by (x%, y%) moves its top-left corner
+   to the sun's spot, so the sun is positioned in viewport units without vh
+   quirks. */
+.sky-sun-track {
+  will-change: transform, opacity;
+  --sun-core: rgb(255, 253, 244);
+  --sun-edge: rgb(255, 236, 170);
+  --sun-scale: 1;
+  --sun-blur: 0px;
+}
+
+.sky-sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(54px, 7.5vmin, 96px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) scale(var(--sun-scale));
+  filter: blur(var(--sun-blur));
+}
+
+.sky-sun-corona {
+  position: absolute;
+  inset: -260%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--sun-edge) 55%, transparent) 0%,
+    color-mix(in srgb, var(--sun-edge) 18%, transparent) 22%,
+    transparent 60%
+  );
+  mix-blend-mode: screen;
+}
+
+.sky-sun-disc {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--sun-core) 0%,
+    var(--sun-core) 52%,
+    var(--sun-edge) 100%
+  );
+  box-shadow:
+    0 0 18px 4px color-mix(in srgb, var(--sun-core) 80%, transparent),
+    0 0 60px 18px color-mix(in srgb, var(--sun-edge) 45%, transparent);
+}
+
+/* ─── Time-of-day slider ─── */
+.magic-slider-value {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  color: #f5dfa5;
+}
+
+.magic-daylight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(243, 233, 214, 0.7);
+}
+
+.magic-slider.magic-slider-daylight {
+  flex: 1;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #6fa8e6 0%,
+    #a9c6e6 30%,
+    #f3dcb2 48%,
+    #f6a066 62%,
+    #a7789a 72%,
+    #3a3466 84%,
+    #0a1026 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.magic-slider-daylight::-moz-range-track {
+  background: transparent;
+}
+
+.magic-slider-daylight:focus-visible {
+  outline: 2px solid rgba(245, 223, 165, 0.8);
+  outline-offset: 4px;
+}
+
+/* ─── Crescent moon (rises at dusk, positioned like the sun) ─── */
+.sky-moon-track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  --moon-color: rgb(248, 212, 160);
+  --moon-tilt: -20deg;
+  --moon-blur: 0px;
+}
+
+.sky-moon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(40px, 5.5vmin, 72px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotate(var(--moon-tilt));
+  /* The glow follows the crescent's shape because it's applied after the mask. */
+  filter:
+    blur(var(--moon-blur))
+    drop-shadow(0 0 6px color-mix(in srgb, var(--moon-color) 70%, transparent))
+    drop-shadow(0 0 22px color-mix(in srgb, var(--moon-color) 35%, transparent));
+}
+
+.sky-moon-crescent {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 50%,
+    color-mix(in srgb, var(--moon-color) 70%, white) 0%,
+    var(--moon-color) 70%
+  );
+  /* An offset circle bites out the lit disc, leaving a crescent. */
+  -webkit-mask: radial-gradient(circle at 68% 42%, transparent 46%, #000 47.5%);
+  mask: radial-gradient(circle at 68% 42%, transparent 46%, #000 47.5%);
+}

@@ -8,7 +8,7 @@ import song2 from '../assets/Oneul - Surrounded By Love.mp3';
 export const tracks = [
   {
     id: 'oneul',
-    name: 'Oneul - Wideflowers',
+    name: 'Oneul - Wildflowers',
     url: 'https://www.youtube.com/watch?v=Z4ppsIMfLvU&t=422s',
     src: song1,
   },

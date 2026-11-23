@@ -28,6 +28,7 @@ export function Archive() {
   const [panelOpen, setPanelOpen] = useState(false);
   const {
     weather, setWeather,
+    timeOfDay, setTimeOfDay,
     cloudDensity, setCloudDensity,
     cloudWhiteness, setCloudWhiteness,
     particleDensity, setParticleDensity,
@@ -213,6 +214,8 @@ export function Archive() {
           onOpenChange={setPanelOpen}
           weather={weather}
           onWeatherChange={setWeather}
+          timeOfDay={timeOfDay}
+          onTimeOfDay={setTimeOfDay}
           cloudDensity={cloudDensity}
           onCloudDensity={setCloudDensity}
           cloudWhiteness={cloudWhiteness}

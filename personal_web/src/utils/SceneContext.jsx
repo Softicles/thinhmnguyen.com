@@ -11,6 +11,8 @@ const STORAGE_KEY = 'archive-scene';
 
 const defaults = {
   weather: 'sunny',
+  // Sun position along its arc: 0 = midday, 1 = full night.
+  timeOfDay: 0.2,
   cloudDensity: 0.25,
   cloudWhiteness: 1.3,
   particleDensity: 0.5,
@@ -58,6 +60,7 @@ export function SceneProvider({ children }) {
   const value = {
     ...scene,
     setWeather: (weather) => setScene((s) => ({ ...s, weather })),
+    setTimeOfDay: (timeOfDay) => setScene((s) => ({ ...s, timeOfDay })),
     setCloudDensity: (cloudDensity) => setScene((s) => ({ ...s, cloudDensity })),
     setCloudWhiteness: (cloudWhiteness) => setScene((s) => ({ ...s, cloudWhiteness })),
     setParticleDensity: (particleDensity) => setScene((s) => ({ ...s, particleDensity })),
