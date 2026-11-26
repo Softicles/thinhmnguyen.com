@@ -50,7 +50,7 @@ const projects = [
             "numpy",
             "pgmpy",
         ],
-        urls: [["https://github.com/Softicles/CS-3600-HW3", GithubIcon], ["https://arxiv.org/abs/2210.09381", Pen]],
+        urls: [["https://github.com/Softicles/Markov-Decision-Model-with-multiple-observation-processes", GithubIcon], ["https://arxiv.org/abs/2210.09381", Pen]],
         awards: ["Achieved > 97% accuracy on ghost spotting"],
     },
 
